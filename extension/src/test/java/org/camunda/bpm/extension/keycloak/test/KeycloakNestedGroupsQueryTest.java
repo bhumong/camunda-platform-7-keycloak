@@ -2,8 +2,8 @@ package org.camunda.bpm.extension.keycloak.test;
 
 import java.util.List;
 
-import org.camunda.bpm.engine.identity.Group;
-import org.camunda.bpm.engine.identity.User;
+import org.eximeebpms.bpm.engine.identity.Group;
+import org.eximeebpms.bpm.engine.identity.User;
 
 /**
  * Tests queries with focus on nested group hierarchy.

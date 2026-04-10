@@ -1,8 +1,8 @@
 package org.camunda.bpm.extension.keycloak.test.util;
 
-import org.camunda.bpm.engine.identity.Group;
-import org.camunda.bpm.engine.identity.User;
-import org.camunda.bpm.engine.impl.cfg.ProcessEngineConfigurationImpl;
+import org.eximeebpms.bpm.engine.identity.Group;
+import org.eximeebpms.bpm.engine.identity.User;
+import org.eximeebpms.bpm.engine.impl.cfg.ProcessEngineConfigurationImpl;
 import org.camunda.bpm.extension.keycloak.CacheableKeycloakCheckPasswordCall;
 import org.camunda.bpm.extension.keycloak.CacheableKeycloakGroupQuery;
 import org.camunda.bpm.extension.keycloak.CacheableKeycloakUserQuery;

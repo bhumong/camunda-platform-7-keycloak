@@ -2,12 +2,12 @@ package org.camunda.bpm.extension.keycloak;
 
 import java.util.List;
 
-import org.camunda.bpm.engine.identity.Group;
-import org.camunda.bpm.engine.identity.GroupQuery;
-import org.camunda.bpm.engine.impl.GroupQueryImpl;
-import org.camunda.bpm.engine.impl.Page;
-import org.camunda.bpm.engine.impl.interceptor.CommandContext;
-import org.camunda.bpm.engine.impl.interceptor.CommandExecutor;
+import org.eximeebpms.bpm.engine.identity.Group;
+import org.eximeebpms.bpm.engine.identity.GroupQuery;
+import org.eximeebpms.bpm.engine.impl.GroupQueryImpl;
+import org.eximeebpms.bpm.engine.impl.Page;
+import org.eximeebpms.bpm.engine.impl.interceptor.CommandContext;
+import org.eximeebpms.bpm.engine.impl.interceptor.CommandExecutor;
 
 /**
  * Keycloak specific group query implementation.

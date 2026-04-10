@@ -6,18 +6,18 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.List;
 
-import org.camunda.bpm.engine.BadUserRequestException;
-import org.camunda.bpm.engine.identity.Group;
-import org.camunda.bpm.engine.identity.GroupQuery;
-import org.camunda.bpm.engine.identity.NativeUserQuery;
-import org.camunda.bpm.engine.identity.Tenant;
-import org.camunda.bpm.engine.identity.TenantQuery;
-import org.camunda.bpm.engine.identity.User;
-import org.camunda.bpm.engine.identity.UserQuery;
-import org.camunda.bpm.engine.impl.UserQueryImpl;
-import org.camunda.bpm.engine.impl.identity.IdentityProviderException;
-import org.camunda.bpm.engine.impl.identity.ReadOnlyIdentityProvider;
-import org.camunda.bpm.engine.impl.interceptor.CommandContext;
+import org.eximeebpms.bpm.engine.BadUserRequestException;
+import org.eximeebpms.bpm.engine.identity.Group;
+import org.eximeebpms.bpm.engine.identity.GroupQuery;
+import org.eximeebpms.bpm.engine.identity.NativeUserQuery;
+import org.eximeebpms.bpm.engine.identity.Tenant;
+import org.eximeebpms.bpm.engine.identity.TenantQuery;
+import org.eximeebpms.bpm.engine.identity.User;
+import org.eximeebpms.bpm.engine.identity.UserQuery;
+import org.eximeebpms.bpm.engine.impl.UserQueryImpl;
+import org.eximeebpms.bpm.engine.impl.identity.IdentityProviderException;
+import org.eximeebpms.bpm.engine.impl.identity.ReadOnlyIdentityProvider;
+import org.eximeebpms.bpm.engine.impl.interceptor.CommandContext;
 import org.camunda.bpm.extension.keycloak.cache.QueryCache;
 import org.camunda.bpm.extension.keycloak.json.JsonException;
 import org.camunda.bpm.extension.keycloak.rest.KeycloakRestTemplate;
@@ -91,7 +91,7 @@ public class KeycloakIdentityProviderSession implements ReadOnlyIdentityProvider
 	 */
 	@Override
 	public User findUserById(String userId) {
-		return createUserQuery(org.camunda.bpm.engine.impl.context.Context.getCommandContext()).userId(userId)
+		return createUserQuery(org.eximeebpms.bpm.engine.impl.context.Context.getCommandContext()).userId(userId)
 				.singleResult();
 	}
 
@@ -100,7 +100,7 @@ public class KeycloakIdentityProviderSession implements ReadOnlyIdentityProvider
 	 */
 	@Override
 	public UserQuery createUserQuery() {
-		return new KeycloakUserQuery(org.camunda.bpm.engine.impl.context.Context.getProcessEngineConfiguration()
+		return new KeycloakUserQuery(org.eximeebpms.bpm.engine.impl.context.Context.getProcessEngineConfiguration()
 				.getCommandExecutorTxRequired());
 	}
 
@@ -295,7 +295,7 @@ public class KeycloakIdentityProviderSession implements ReadOnlyIdentityProvider
 	 */
 	@Override
 	public Group findGroupById(String groupId) {
-		return createGroupQuery(org.camunda.bpm.engine.impl.context.Context.getCommandContext()).groupId(groupId)
+		return createGroupQuery(org.eximeebpms.bpm.engine.impl.context.Context.getCommandContext()).groupId(groupId)
 				.singleResult();
 	}
 
@@ -304,7 +304,7 @@ public class KeycloakIdentityProviderSession implements ReadOnlyIdentityProvider
 	 */
 	@Override
 	public GroupQuery createGroupQuery() {
-		return new KeycloakGroupQuery(org.camunda.bpm.engine.impl.context.Context.getProcessEngineConfiguration()
+		return new KeycloakGroupQuery(org.eximeebpms.bpm.engine.impl.context.Context.getProcessEngineConfiguration()
 				.getCommandExecutorTxRequired());
 	}
 
@@ -384,7 +384,7 @@ public class KeycloakIdentityProviderSession implements ReadOnlyIdentityProvider
 	
 	@Override
 	public TenantQuery createTenantQuery() {
-		return new KeycloakTenantQuery(org.camunda.bpm.engine.impl.context.Context.getProcessEngineConfiguration()
+		return new KeycloakTenantQuery(org.eximeebpms.bpm.engine.impl.context.Context.getProcessEngineConfiguration()
 				.getCommandExecutorTxRequired());
 	}
 

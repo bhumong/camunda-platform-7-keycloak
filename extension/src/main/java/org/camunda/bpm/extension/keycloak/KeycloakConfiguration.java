@@ -195,6 +195,14 @@ public class KeycloakConfiguration {
 		this.useEmailAsCamundaUserId = useEmailAsCamundaUserId;
 	}
 
+	public boolean isUseEmailAsEximeebpmsUserId() {
+		return isUseEmailAsCamundaUserId();
+	}
+
+	public void setUseEmailAsEximeebpmsUserId(boolean useEmailAsEximeebpmsUserId) {
+		setUseEmailAsCamundaUserId(useEmailAsEximeebpmsUserId);
+	}
+
 	/**
 	 * @return the useUsernameAsCamundaUserId
 	 */
@@ -209,6 +217,14 @@ public class KeycloakConfiguration {
 		this.useUsernameAsCamundaUserId = useUsernameAsCamundaUserId;
 	}
 
+	public boolean isUseUsernameAsEximeebpmsUserId() {
+		return isUseUsernameAsCamundaUserId();
+	}
+
+	public void setUseUsernameAsEximeebpmsUserId(boolean useUsernameAsEximeebpmsUserId) {
+		setUseUsernameAsCamundaUserId(useUsernameAsEximeebpmsUserId);
+	}
+
 	/**
 	 * @return the useGroupPathAsCamundaGroupId
 	 */
@@ -221,6 +237,14 @@ public class KeycloakConfiguration {
 	 */
 	public void setUseGroupPathAsCamundaGroupId(boolean useGroupPathAsCamundaGroupId) {
 		this.useGroupPathAsCamundaGroupId = useGroupPathAsCamundaGroupId;
+	}
+
+	public boolean isUseGroupPathAsEximeebpmsGroupId() {
+		return isUseGroupPathAsCamundaGroupId();
+	}
+
+	public void setUseGroupPathAsEximeebpmsGroupId(boolean useGroupPathAsEximeebpmsGroupId) {
+		setUseGroupPathAsCamundaGroupId(useGroupPathAsEximeebpmsGroupId);
 	}
 
 	/**

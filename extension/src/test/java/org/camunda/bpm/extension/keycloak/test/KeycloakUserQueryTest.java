@@ -1,15 +1,15 @@
 package org.camunda.bpm.extension.keycloak.test;
 
-import static org.camunda.bpm.engine.authorization.Authorization.AUTH_TYPE_GRANT;
+import static org.eximeebpms.bpm.engine.authorization.Authorization.AUTH_TYPE_GRANT;
 import static org.junit.Assert.assertNotEquals;
 
 import java.util.List;
 
-import org.camunda.bpm.engine.BadUserRequestException;
-import org.camunda.bpm.engine.authorization.Authorization;
-import org.camunda.bpm.engine.authorization.Permission;
-import org.camunda.bpm.engine.authorization.Resource;
-import org.camunda.bpm.engine.identity.User;
+import org.eximeebpms.bpm.engine.BadUserRequestException;
+import org.eximeebpms.bpm.engine.authorization.Authorization;
+import org.eximeebpms.bpm.engine.authorization.Permission;
+import org.eximeebpms.bpm.engine.authorization.Resource;
+import org.eximeebpms.bpm.engine.identity.User;
 import org.camunda.bpm.extension.keycloak.CacheableKeycloakUserQuery;
 import org.camunda.bpm.extension.keycloak.KeycloakUserQuery;
 

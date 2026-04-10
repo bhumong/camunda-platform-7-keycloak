@@ -2,7 +2,7 @@ package org.camunda.bpm.extension.keycloak;
 
 import static org.camunda.bpm.extension.keycloak.json.JsonUtil.*;
 
-import org.camunda.bpm.engine.impl.identity.IdentityProviderException;
+import org.eximeebpms.bpm.engine.impl.identity.IdentityProviderException;
 import org.camunda.bpm.extension.keycloak.json.JsonException;
 import org.camunda.bpm.extension.keycloak.rest.KeycloakRestTemplate;
 import org.camunda.bpm.extension.keycloak.util.ContentType;

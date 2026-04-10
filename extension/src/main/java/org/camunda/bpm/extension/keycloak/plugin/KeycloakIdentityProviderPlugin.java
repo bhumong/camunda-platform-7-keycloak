@@ -1,21 +1,21 @@
 package org.camunda.bpm.extension.keycloak.plugin;
 
-import static org.camunda.bpm.engine.authorization.Authorization.ANY;
-import static org.camunda.bpm.engine.authorization.Authorization.AUTH_TYPE_GRANT;
-import static org.camunda.bpm.engine.authorization.Permissions.ALL;
+import static org.eximeebpms.bpm.engine.authorization.Authorization.ANY;
+import static org.eximeebpms.bpm.engine.authorization.Authorization.AUTH_TYPE_GRANT;
+import static org.eximeebpms.bpm.engine.authorization.Permissions.ALL;
 
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import org.camunda.bpm.engine.AuthorizationService;
-import org.camunda.bpm.engine.ProcessEngine;
-import org.camunda.bpm.engine.authorization.Resource;
-import org.camunda.bpm.engine.authorization.Resources;
-import org.camunda.bpm.engine.impl.cfg.ProcessEngineConfigurationImpl;
-import org.camunda.bpm.engine.impl.cfg.ProcessEnginePlugin;
-import org.camunda.bpm.engine.impl.persistence.entity.AuthorizationEntity;
+import org.eximeebpms.bpm.engine.AuthorizationService;
+import org.eximeebpms.bpm.engine.ProcessEngine;
+import org.eximeebpms.bpm.engine.authorization.Resource;
+import org.eximeebpms.bpm.engine.authorization.Resources;
+import org.eximeebpms.bpm.engine.impl.cfg.ProcessEngineConfigurationImpl;
+import org.eximeebpms.bpm.engine.impl.cfg.ProcessEnginePlugin;
+import org.eximeebpms.bpm.engine.impl.persistence.entity.AuthorizationEntity;
 import org.camunda.bpm.extension.keycloak.KeycloakConfiguration;
 import org.camunda.bpm.extension.keycloak.KeycloakIdentityProviderFactory;
 import org.camunda.bpm.extension.keycloak.KeycloakIdentityProviderSession;
@@ -172,11 +172,14 @@ public class KeycloakIdentityProviderPlugin extends KeycloakConfiguration implem
 											+ missing.toString());
 		}
 		if (isUseEmailAsCamundaUserId() && isUseUsernameAsCamundaUserId()) {
+			final String mutuallyExclusiveMessage =
+					"cannot use configuration parameters 'useUsernameAsCamundaUserId' or 'useUsernameAsEximeebpmsUserId' "
+					+ "AND 'useEmailAsCamundaUserId' or 'useEmailAsEximeebpmsUserId' at the same time";
 			LOG.activationError(getClass().getSimpleName(), processEngineConfiguration.getProcessEngineName(),
-					"cannot use configuration parameters 'useUsernameAsCamundaUserId' AND 'useEmailAsCamundaUserId' at the same time");
+					mutuallyExclusiveMessage);
 			throw new IllegalStateException("Unable to initialize plugin "
 											+ getClass().getSimpleName()
-											+ ": - cannot use configuration parameters 'useUsernameAsCamundaUserId' AND 'useEmailAsCamundaUserId' at the same time");
+											+ ": - " + mutuallyExclusiveMessage);
 		}
 		if (!Charset.isSupported(charset)) {
 			throw new IllegalStateException("Unable to initialize plugin "

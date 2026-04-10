@@ -2,12 +2,12 @@ package org.camunda.bpm.extension.keycloak;
 
 import java.util.List;
 
-import org.camunda.bpm.engine.identity.User;
-import org.camunda.bpm.engine.identity.UserQuery;
-import org.camunda.bpm.engine.impl.Page;
-import org.camunda.bpm.engine.impl.UserQueryImpl;
-import org.camunda.bpm.engine.impl.interceptor.CommandContext;
-import org.camunda.bpm.engine.impl.interceptor.CommandExecutor;
+import org.eximeebpms.bpm.engine.identity.User;
+import org.eximeebpms.bpm.engine.identity.UserQuery;
+import org.eximeebpms.bpm.engine.impl.Page;
+import org.eximeebpms.bpm.engine.impl.UserQueryImpl;
+import org.eximeebpms.bpm.engine.impl.interceptor.CommandContext;
+import org.eximeebpms.bpm.engine.impl.interceptor.CommandExecutor;
 
 /**
  * Keycloak specific user query implementation.

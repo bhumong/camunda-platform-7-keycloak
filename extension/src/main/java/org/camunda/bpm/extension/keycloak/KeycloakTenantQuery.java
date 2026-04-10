@@ -3,11 +3,11 @@ package org.camunda.bpm.extension.keycloak;
 import java.util.Collections;
 import java.util.List;
 
-import org.camunda.bpm.engine.identity.Tenant;
-import org.camunda.bpm.engine.impl.Page;
-import org.camunda.bpm.engine.impl.TenantQueryImpl;
-import org.camunda.bpm.engine.impl.interceptor.CommandContext;
-import org.camunda.bpm.engine.impl.interceptor.CommandExecutor;
+import org.eximeebpms.bpm.engine.identity.Tenant;
+import org.eximeebpms.bpm.engine.impl.Page;
+import org.eximeebpms.bpm.engine.impl.TenantQueryImpl;
+import org.eximeebpms.bpm.engine.impl.interceptor.CommandContext;
+import org.eximeebpms.bpm.engine.impl.interceptor.CommandExecutor;
 
 /**
  * Since multi-tenancy is currently not yet supported for the Keycloak plugin, the query always

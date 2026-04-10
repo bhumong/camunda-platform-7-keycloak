@@ -1,7 +1,7 @@
 package org.camunda.bpm.extension.keycloak;
 
-import static org.camunda.bpm.engine.authorization.Permissions.READ;
-import static org.camunda.bpm.engine.authorization.Resources.USER;
+import static org.eximeebpms.bpm.engine.authorization.Permissions.READ;
+import static org.eximeebpms.bpm.engine.authorization.Resources.USER;
 import static org.camunda.bpm.extension.keycloak.json.JsonUtil.*;
 
 import java.util.ArrayList;
@@ -11,12 +11,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import org.camunda.bpm.engine.identity.User;
-import org.camunda.bpm.engine.impl.Direction;
-import org.camunda.bpm.engine.impl.QueryOrderingProperty;
-import org.camunda.bpm.engine.impl.UserQueryProperty;
-import org.camunda.bpm.engine.impl.identity.IdentityProviderException;
-import org.camunda.bpm.engine.impl.persistence.entity.UserEntity;
+import org.eximeebpms.bpm.engine.identity.User;
+import org.eximeebpms.bpm.engine.impl.Direction;
+import org.eximeebpms.bpm.engine.impl.QueryOrderingProperty;
+import org.eximeebpms.bpm.engine.impl.UserQueryProperty;
+import org.eximeebpms.bpm.engine.impl.identity.IdentityProviderException;
+import org.eximeebpms.bpm.engine.impl.persistence.entity.UserEntity;
 import org.camunda.bpm.extension.keycloak.json.JsonException;
 import org.camunda.bpm.extension.keycloak.rest.KeycloakRestTemplate;
 import org.camunda.bpm.extension.keycloak.util.KeycloakPluginLogger;

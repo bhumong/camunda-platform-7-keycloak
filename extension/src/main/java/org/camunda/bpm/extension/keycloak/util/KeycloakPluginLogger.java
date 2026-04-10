@@ -1,6 +1,6 @@
 package org.camunda.bpm.extension.keycloak.util;
 
-import org.camunda.commons.logging.BaseLogger;
+import org.eximeebpms.commons.logging.BaseLogger;
 
 /**
  * Keycloak plugin logger including message IDs.

@@ -9,9 +9,9 @@ import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.List;
 
-import org.camunda.bpm.engine.authorization.Permission;
-import org.camunda.bpm.engine.authorization.Resource;
-import org.camunda.bpm.engine.impl.persistence.entity.UserEntity;
+import org.eximeebpms.bpm.engine.authorization.Permission;
+import org.eximeebpms.bpm.engine.authorization.Resource;
+import org.eximeebpms.bpm.engine.impl.persistence.entity.UserEntity;
 import org.camunda.bpm.extension.keycloak.json.JsonException;
 import org.camunda.bpm.extension.keycloak.rest.KeycloakRestTemplate;
 import org.springframework.http.HttpMethod;
@@ -232,7 +232,7 @@ public abstract class KeycloakServiceBase {
 			return false;
 		}
 		return userId.equalsIgnoreCase(
-				org.camunda.bpm.engine.impl.context.Context.getCommandContext().getAuthenticatedUserId());
+				org.eximeebpms.bpm.engine.impl.context.Context.getCommandContext().getAuthenticatedUserId());
 	}
 	
 	/**
@@ -243,7 +243,7 @@ public abstract class KeycloakServiceBase {
 	 * @return {@code true} if the current user is authorized to access the given resourceId
 	 */
 	protected boolean isAuthorized(Permission permission, Resource resource, String resourceId) {
-		return !keycloakConfiguration.isAuthorizationCheckEnabled() || org.camunda.bpm.engine.impl.context.Context
+		return !keycloakConfiguration.isAuthorizationCheckEnabled() || org.eximeebpms.bpm.engine.impl.context.Context
 				.getCommandContext().getAuthorizationManager().isAuthorized(permission, resource, resourceId);
 	}
 

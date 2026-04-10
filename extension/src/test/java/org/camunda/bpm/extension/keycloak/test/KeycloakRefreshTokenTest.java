@@ -2,7 +2,7 @@ package org.camunda.bpm.extension.keycloak.test;
 
 import java.lang.reflect.Field;
 
-import org.camunda.bpm.engine.impl.cfg.ProcessEngineConfigurationImpl;
+import org.eximeebpms.bpm.engine.impl.cfg.ProcessEngineConfigurationImpl;
 import org.camunda.bpm.extension.keycloak.KeycloakContext;
 import org.camunda.bpm.extension.keycloak.KeycloakContextProvider;
 import org.camunda.bpm.extension.keycloak.KeycloakIdentityProviderFactory;
